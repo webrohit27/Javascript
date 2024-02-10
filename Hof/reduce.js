@@ -39,5 +39,5 @@ const myBookStore = [
 const payToMe = myBookStore.reduce( (acc, item) => acc + item.price, 0);
 
 console.log(payToMe);
-
+ // 3000
 
