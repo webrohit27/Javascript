@@ -5,9 +5,9 @@ function multipleBy5(num){
 
 multipleBy5.power = 2
 
-console.log(multipleBy5(5));
-console.log(multipleBy5.power);
-console.log(multipleBy5.prototype);
+console.log(multipleBy5(5)); // 25
+console.log(multipleBy5.power);  // 5
+console.log(multipleBy5.prototype);  // {} 
 
 function createUser(username, score){
     this.username = username
@@ -15,14 +15,14 @@ function createUser(username, score){
 }
 
 createUser.prototype.increment = function(){
-    this.score++
+    this.score++              // we use this here for get createuser value
 }
 createUser.prototype.printMe = function(){
     console.log(`price is ${this.score}`);
 }
 
-const chai = new createUser("chai", 25)
-const tea = createUser("tea", 250)
+const chai = new createUser("chai", 25) // 25  
+const tea = createUser("tea", 250) // undefined deu to not use of new keyword
 
 chai.printMe()
 
